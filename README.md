@@ -16,5 +16,6 @@ and navigates to the welcome page.
 
 These images are from the application.
 this the link to the running applictaion.
-https://youtu.be/Rbgwfs9-Iuk 
+https://youtu.be/-Zi6dJOwkK4 
+and here is a clear video
 https://youtu.be/Rbgwfs9-Iuk 
