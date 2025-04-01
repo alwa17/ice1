@@ -27,12 +27,12 @@ class splashscreen : AppCompatActivity() {
         buttonSearch.setOnClickListener {
             val timeOfDay = editText.text.toString().trim()
             val suggestion = when (timeOfDay.lowercase()) {
-                "morning" -> "Go for a jog or have a healthy breakfast!"
-                "mid-morning" -> "Time for a light snack or a short walk."
-                "afternoon" -> "A great time to focus on work or studies."
-                "mid-afternoon" -> "Have some coffee and refresh yourself!"
-                "dinner" -> "Enjoy a nice meal with family or friends."
-                else -> "Please enter a valid time of day."
+                "morning" -> "HAVE A HEALTHY BREAKFAST TO START YOUR DAY!"
+                "mid-morning" -> "GRAB SOMETHING LIGHT TO KEEP UP."
+                "afternoon" -> "GET YOURSELF SOMETHING TO FILL YOU UP FOR THE REST OF THE DAY."
+                "mid-afternoon" -> "GRAB A SNACK AND SOMETHING TO DRINK."
+                "dinner" -> "ENJOY A HOT MEAL BEFORE GOING BED."
+                else -> "PLEASE ENTER CORRECT SPELLING TO RUN APP."
             }
             textDisplay.text = suggestion
         }
