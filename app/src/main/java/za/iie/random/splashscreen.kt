@@ -1,13 +1,15 @@
 package za.iie.random
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class splashscreen<TextView> : AppCompatActivity() {
+class splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,17 +22,17 @@ class splashscreen<TextView> : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.editText)
         val buttonSearch = findViewById<Button>(R.id.buttonSearch)
         val buttonReset = findViewById<Button>(R.id.buttonReset)
-        val textDisplay = findViewById<TextView>(R.id.textView)
+        val textDisplay = findViewById<TextView>(R.id.textDisplay)
 
         buttonSearch.setOnClickListener {
             val timeOfDay = editText.text.toString().trim()
             val suggestion = when (timeOfDay.lowercase()) {
-                "morning" -> "HAVE A HEALTHY BREAKFAST"
-                "mid-morning" -> "HAVE SOMETHING LIGHT TO CONTINUE YOUR DAY"
-                "afternoon" -> "HAVE SOMETHING TO FILL YOU UP FOR THE AFTERNOON"
-                "mid-afternoon" -> "GET YOURSELF A SNACK AND A DRINK TO HOLD UP"
-                "dinner" -> "ENJOY A HOT MEAL WITH YOUR FAM BAM! "
-                else -> "PLEASE ENTER CORRECT SPELLING."
+                "morning" -> "Go for a jog or have a healthy breakfast!"
+                "mid-morning" -> "Time for a light snack or a short walk."
+                "afternoon" -> "A great time to focus on work or studies."
+                "mid-afternoon" -> "Have some coffee and refresh yourself!"
+                "dinner" -> "Enjoy a nice meal with family or friends."
+                else -> "Please enter a valid time of day."
             }
             textDisplay.text = suggestion
         }
@@ -39,6 +41,5 @@ class splashscreen<TextView> : AppCompatActivity() {
             editText.text.clear()
             textDisplay.text = ""
         }
-    }
     }
 }
