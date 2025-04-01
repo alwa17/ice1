@@ -1,5 +1,6 @@
 package za.iie.random
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -24,7 +25,7 @@ class splashscreen : AppCompatActivity() {
         val buttonReset = findViewById<Button>(R.id.buttonReset)
         val textDisplay = findViewById<TextView>(R.id.textDisplay)
 
-        buttonSearch.setOnClickListener {
+        buttonSearch.setOnClickListener {     // buttton function to display meal to have //
             val timeOfDay = editText.text.toString().trim()
             val suggestion = when (timeOfDay.lowercase()) {
                 "morning" -> "HAVE A HEALTHY BREAKFAST TO START YOUR DAY!"
@@ -37,9 +38,14 @@ class splashscreen : AppCompatActivity() {
             textDisplay.text = suggestion
         }
 
-        buttonReset.setOnClickListener {
-            editText.text.clear()
-            textDisplay.text = ""
+        val button: Button = findViewById(R.id.buttonReset)
+        button.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent) // button to the next page // // button to reset the page to home page//
         }
     }
 }
+// referencing
+
+
+//
