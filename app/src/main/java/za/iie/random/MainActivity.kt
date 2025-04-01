@@ -1,5 +1,6 @@
 package za.iie.random
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -19,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         }
         val buttonProceed = findViewById<Button>(R.id.buttonProceed)
 
+        val button: Button = findViewById(R.id.buttonProceed)
+        button.setOnClickListener {
+            val intent = Intent(this, splashscreen::class.java)
+            startActivity(intent)
 
-
+        }
     }
 }
